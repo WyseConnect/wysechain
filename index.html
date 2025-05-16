@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WYSE Blockchain Technology | Pioneering the Future of Blockchain</title>
+    <meta name="description" content="WYSE Blockchain Technology - A comprehensive blockchain-powered ecosystem designed to empower individuals and businesses through decentralized finance and innovation." />
+    <meta name="author" content="WYSE Blockchain" />
+
+    <meta property="og:title" content="WYSE Blockchain Technology" />
+    <meta property="og:description" content="Pioneering the Future of Blockchain and Digital Opportunities" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/twt-card.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@wyse_blockchain" />
+    <meta name="twitter:image" content="/assets/twt-card.png" />
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#1A1F2C" />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="/src/js/main.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Register service worker for PWA
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful');
+            })
+            .catch(error => {
+              console.log('ServiceWorker registration failed: ', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
